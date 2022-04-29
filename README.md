@@ -90,9 +90,16 @@ Note that there are multiple init messages from CoppeliaSim on terminal. An indi
 
 Troubleshooting
 ------
-* If when compiling your packages an error occurs on simExtROSInterface, download the file 'libsimExtROSInterface.so' included on this repository and copy it to $COPPELIASIM_ROOT_DIR. 
+* If when compiling your packages an error occurs on simExtROSInterface, download the file 'libsimExtROSInterface.so' included on this repository and copy it to $COPPELIASIM_ROOT_DIR:
 
-* Now, remove simExtROSInterface from /src and compile again:
+		$ cd ~/
+		$ rm git clone https://github.com/davidsimonmarques/CoppeliaSim_4.2.0_Ubuntu16.04_ROS_Kinetic.git
+		$ cp CoppeliaSim_4.2.0_Ubuntu16.04_ROS_Kinetic/libsimExtROSInterface.so $COPPELIASIM_ROOT_DIR
+		
+* Now, make sure to remove simExtROSInterface from ~/catkin_ws/src and compile again:
+
 		$ rm -rf ~/catkin_ws/src/simExtROSInterface
 		$ cd ~/catkin_ws
 		$ catkin clean -y && catkin build
+		
+* Run ROS master and CoppeliaSim. Everything shoud work fine now. 
