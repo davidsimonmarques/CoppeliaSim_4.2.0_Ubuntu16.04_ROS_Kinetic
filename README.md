@@ -87,3 +87,12 @@ Note that there are multiple init messages from CoppeliaSim on terminal. An indi
 		$ rostopic list
 		
 	If the topic "/tf" appears, the ROS/CoppeliaSim is enabled and functional.
+
+Troubleshooting
+------
+* If when compiling your packages an error occurs on simExtROSInterface, download the file 'libsimExtROSInterface.so' included on this repository and copy it to $COPPELIASIM_ROOT_DIR. 
+
+* Now, remove simExtROSInterface from /src and compile again:
+		$ rm -rf ~/catkin_ws/src/simExtROSInterface
+		$ cd ~/catkin_ws
+		$ catkin clean -y && catkin build
