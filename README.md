@@ -103,3 +103,7 @@ Troubleshooting
 		$ catkin clean -y && catkin build
 		
 * Run ROS master and CoppeliaSim. Everything shoud work fine now. 
+
+
+## References
+ * [How to Install CoppeliaSim 4.1.0 in Ubuntu 16.04 with ROS Bridge and the Velodyne plugin]( https://gist.github.com/h3ct0r/fa5b85eb0ed2c02132734e19128e4218)
